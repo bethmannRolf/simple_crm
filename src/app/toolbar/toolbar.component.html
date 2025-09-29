@@ -1,10 +1,12 @@
-<div class="whole-toolbar">
- 
-    <div class="burger-menu-div"> 
-           <img class="burger-menu" src="/assets/menu_white.svg">
-     
-    </div>
-    
-   <span class="dashboard-heading">Dashboard</span>
+<div class="whole-toolbar" [class.shrink]="sidebarOpen()">
+  <div class="burger-menu-div">
+    <img (click)="toggleSidebar()" class="burger-menu" src="/assets/menu_white.svg" alt="Menu">
+  </div>
+  <span class="toolbar-heading">Dashboard</span>
 
+  <!-- @if (sidebarOpen()) {
+    <span class="status">Sidebar ist offen</span>
+  } @else {
+    <span class="status">Sidebar ist geschlossen</span>
+  } -->
 </div>
