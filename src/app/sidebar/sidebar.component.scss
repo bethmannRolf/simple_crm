@@ -7,11 +7,20 @@
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 900;
-  background: #333;
+
+background-color: WHITESMOKE;
+
   color: white;
   user-select: none;
 }
 
 .sidebar.open {
   width: 250px;               
+}
+
+
+.logo-area{
+  height: 150px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.4);
 }

@@ -1,9 +1,19 @@
 <div class="sidebar" [class.open]="sidebarOpen()">
+
+  <div class="logo-area">
+
+  </div>
+  <div class="sidebar-navigation-div">
+
+  </div>
+  <app-user></app-user>
   <!-- @if (sidebarOpen()) {
     <ul>
-      @for (item of ['Home','Einstellungen','Profil']; track $index) {
+      @for (item of ['Dasboard','User','']; track $index) {
         <li>{{ item }}</li>
       }
     </ul>
   } -->
 </div>
+
+<app-user></app-user>

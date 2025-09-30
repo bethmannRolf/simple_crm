@@ -3,12 +3,12 @@ import { ToolbarComponent } from "../toolbar/toolbar.component";
 import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-simplecrm',
   imports: [ToolbarComponent, SidebarComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  templateUrl: './simplecrm.component.html',
+  styleUrl: './simplecrm.component.scss'
 })
-export class DashboardComponent {
+export class SimplecrmComponent {
 
 
 

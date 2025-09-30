@@ -29,6 +29,10 @@
 
 
 .burger-menu{
+  cursor: pointer;
     width: 32px;
     height: 32px;
+    &:hover{
+      scale: (1.1);
+    }
 }
