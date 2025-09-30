@@ -1,19 +1,14 @@
 <div class="sidebar" [class.open]="sidebarOpen()">
 
   <div class="logo-area">
-
+<img src="">
   </div>
-  <div class="sidebar-navigation-div">
 
+  
+  @if (sidebarOpen()) {
+  <div class="sidebar-content-div">
+    <app-dashboard></app-dashboard>
+    <app-user></app-user>
   </div>
-  <app-user></app-user>
-  <!-- @if (sidebarOpen()) {
-    <ul>
-      @for (item of ['Dasboard','User','']; track $index) {
-        <li>{{ item }}</li>
-      }
-    </ul>
-  } -->
+  }
 </div>
-
-<app-user></app-user>
