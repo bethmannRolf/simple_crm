@@ -3,34 +3,44 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 0;                   
+  width: 0;
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 900;
 
-background-color: WHITESMOKE;
+  background-color: WHITESMOKE;
 
   color: white;
   user-select: none;
 }
 
 .sidebar.open {
-  width: 250px;               
+  width: 250px;
 }
 
 
-.logo-area{
+.logo-area {
   height: 150px;
-border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 
-.sidebar-content-div{
+.sidebar-content-div {
   display: flex;
-  font-weight: bold;
- font-size: 20px;
+
   flex-direction: column;
   padding-left: 20px;
   padding-top: 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-sidebar {
+  width: 64px;
+  height: 64px;
 }

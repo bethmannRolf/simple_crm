@@ -1,3 +1,10 @@
-.dashboard-nav-container {
+.dashboard-span-style {
   color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dashboard-image-style {
+  width: 32px;
+  height: 32px;
 }

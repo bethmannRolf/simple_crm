@@ -24,9 +24,18 @@
 
 .sidebar-content-div {
   display: flex;
-  font-weight: bold;
-  font-size: 20px;
   flex-direction: column;
   padding-left: 20px;
   padding-top: 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-sidebar {
+  width: 64px;
+  height: 64px;
 }
