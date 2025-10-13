@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { simplecrmComponent } from './simplecrm.component';
+import { UserContentComponent } from './user-content.component';
 
-describe('simplecrmComponent', () => {
-  let component: simplecrmComponent;
-  let fixture: ComponentFixture<simplecrmComponent>;
+describe('UserContentComponent', () => {
+  let component: UserContentComponent;
+  let fixture: ComponentFixture<UserContentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [simplecrmComponent]
+      imports: [UserContentComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(simplecrmComponent);
+    fixture = TestBed.createComponent(UserContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

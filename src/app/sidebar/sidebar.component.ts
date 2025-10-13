@@ -1,20 +1,22 @@
 import { Component, inject, signal } from '@angular/core';
 import { ToggleSidebarService } from '../toggle-sidebar.service';
-import { UserComponent } from "../user/user.component";
-import { DashboardComponent } from "../dashboard/dashboard.component";
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,         
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
-  imports: [UserComponent, DashboardComponent, UserComponent, DashboardComponent]
+  imports: [ RouterLink, RouterLinkActive]
 })
 export class SidebarComponent {
   private sidebarService = inject(ToggleSidebarService);
 
  
   sidebarOpen = signal(false);
+user: any|string;
+dashboard: any|string;
 
   constructor() {
 
@@ -22,4 +24,7 @@ export class SidebarComponent {
       this.sidebarOpen.set(value);
     });
   }
+
+
+  
 }

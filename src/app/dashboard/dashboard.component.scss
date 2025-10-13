@@ -1,4 +1,15 @@
-.dashboard-nav-container {}
+.dashboard-nav-container {
+        display:flex;
+   align-items: center;
+   padding-top: 10px;
+
+   &:hover{
+    background-color: lightgray;
+    scale:(1.1)
+    
+   }
+
+}
 
 .dashboard-span-style {
 

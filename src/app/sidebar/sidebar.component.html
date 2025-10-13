@@ -1,14 +1,30 @@
 <div class="sidebar" [class.open]="sidebarOpen()">
 
   <div class="logo-area">
-<img class="logo-sidebar" src="/assets/logo.png">
+    <img class="logo-sidebar" src="/assets/logo.png" alt="Logo">
   </div>
 
-  
+
   @if (sidebarOpen()) {
-  <div class="sidebar-content-div">
-    <app-dashboard></app-dashboard>
-    <app-user></app-user>
-  </div>
+    <div class="sidebar-content-div">
+  
+      <a 
+        routerLink="/dashboard" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="sidebar-link"
+      >
+        Dashboard
+      </a>
+
+  
+      <a 
+        routerLink="/user" 
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        User
+      </a>
+    </div>
   }
 </div>

@@ -1,1 +1,1 @@
-.user-nav-container{color:black}
+.user-nav-container{display:flex;align-items:center;padding-top:10px}.user-nav-container:hover{background-color:lightgray;scale:1.1}.user-span-style{color:black;font-weight:bold;font-size:20px;padding-left:20px}.user-image-style{width:32px;height:32px}

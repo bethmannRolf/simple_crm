@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
-import { SimplecrmComponent } from './simplecrm/simplecrm.component';
+
+import { UserContentComponent } from './user-content/user-content.component';
+import { DashboardContentComponent } from './dashboard-content/dashboard-content.component';
+
 
 export const routes: Routes = [
-    {path:'', component:SimplecrmComponent}
+    { path: '', component:DashboardContentComponent },
+    { path: 'dashboard', component: DashboardContentComponent },
+    { path: 'user', component: UserContentComponent }
 ];
