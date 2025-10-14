@@ -6,25 +6,17 @@
 
 
   @if (sidebarOpen()) {
-    <div class="sidebar-content-div">
-  
-      <a 
-        routerLink="/dashboard" 
-        routerLinkActive="active" 
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="sidebar-link"
-      >
-        Dashboard
-      </a>
+  <div class="sidebar-content-div">
 
-  
-      <a 
-        routerLink="/user" 
-        routerLinkActive="active"
-        class="sidebar-link"
-      >
-        User
-      </a>
-    </div>
+    <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      class="sidebar-link">
+      <img src="/assets/dashboard.svg"><span>Dashboard</span>
+    </a>
+
+
+    <a routerLink="/user" routerLinkActive="active" class="sidebar-link">
+      <img class="sidebar-image" src="/assets/user.svg"><span> User</span>
+    </a>
+  </div>
   }
 </div>
