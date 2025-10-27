@@ -1,2 +1,4 @@
-<p>user-content works!</p>
 <button (click)="openAddUserDialog()" class="add-user-button-style"><img src="/assets/add_white.svg"></button>
+@if (showAddUserDialog) {
+<app-dialog-add-user (close)="closeAddUserDialog()"></app-dialog-add-user>
+}
