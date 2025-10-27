@@ -9,41 +9,55 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, filter 0.25s ease-out;
   padding: 0;
-
-  &:hover{
-    cursor: pointer;
-     scale:(1.1)
-    
-  }
+  position: fixed;
+  right: 56px;
+  bottom: 56px;
+  z-index: 10;
 
   img {
     width: 24px;
     height: 24px;
-    pointer-events: none; // verhindert, dass Klicks das Bild "blockieren"
+    pointer-events: none; // verhindert, dass Klicks das Bild blockieren
   }
 
+  /* 🔹 Hover-Effekt etwas sanfter */
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.05); // leicht heller, sanfter Effekt
   }
 
   &:active {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.97);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   }
 
   &:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.4);
   }
-}
 
+  /* Tooltip */
+  &::after {
+    content: 'Add User';
+    position: absolute;
+    bottom: 120%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  }
 
-.add-user-button-style {
-  position: fixed;
-  right: 56px;
-  bottom: 56px;
-  z-index: 1000;
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(50%) translateY(-3px);
+  }
 }
