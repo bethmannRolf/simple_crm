@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DialogAddUserComponent } from "../dialog-add-user/dialog-add-user.component";
+import { User } from '../models/user.class';
 
 @Component({
   selector: 'app-user-content',
@@ -8,6 +9,9 @@ import { DialogAddUserComponent } from "../dialog-add-user/dialog-add-user.compo
   styleUrl: './user-content.component.scss'
 })
 export class UserContentComponent {
+
+
+
 
 
   showAddUserDialog = false;
