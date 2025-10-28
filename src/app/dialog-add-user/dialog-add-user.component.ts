@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { User } from '../models/user.class';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-dialog-add-user',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './dialog-add-user.component.html',
   styleUrl: './dialog-add-user.component.scss'
 })
