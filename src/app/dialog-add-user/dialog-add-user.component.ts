@@ -22,4 +22,10 @@ closeDialog() {
 }
 
 
+
+saveUser(){
+  console.log('Current User is', this.user)
+}
+
+
 }
