@@ -2,10 +2,11 @@ import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { User } from '../models/user.class';
 import { FormsModule } from '@angular/forms';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { ProgressBarComponent } from "../progress-bar/progress-bar.component";
 
 @Component({
   selector: 'app-dialog-add-user',
-  imports: [FormsModule],
+  imports: [FormsModule, ProgressBarComponent],
   templateUrl: './dialog-add-user.component.html',
   styleUrls: ['./dialog-add-user.component.scss'] // Hinweis: styleUrls statt styleUrl
 })

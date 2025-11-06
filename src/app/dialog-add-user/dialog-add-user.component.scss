@@ -14,7 +14,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 24px;
+  padding-bottom: 24px;
+
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 1001;
@@ -80,4 +81,17 @@ input::placeholder{
 .required-asteric{
     padding-left: 2px;
     color: red;
+}
+
+.user-dialog-container{
+  position: relative;
+
+}
+app-progress-bar{
+width: 100%;
+}
+
+
+h2{
+  padding-top:  24px,
 }
