@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { ProgressBarComponent } from "../progress-bar/progress-bar.component";
 
+
 @Component({
   selector: 'app-dialog-add-user',
   imports: [FormsModule, ProgressBarComponent],
@@ -12,10 +13,11 @@ import { ProgressBarComponent } from "../progress-bar/progress-bar.component";
 })
 export class DialogAddUserComponent {
 
+  loading = false
   user: User = new User();
   @Output() close = new EventEmitter<void>();
 
- 
+
   private firestore: Firestore = inject(Firestore);
 
   closeDialog() {
@@ -24,12 +26,12 @@ export class DialogAddUserComponent {
 
   async saveUser() {
     console.log('Current User is', this.user);
-
+    this.loading = true
     try {
-    
+
       const usersCollection = collection(this.firestore, 'users');
 
-  
+
       await addDoc(usersCollection, {
         firstName: this.user.firstName,
         lastName: this.user.lastName,
@@ -39,6 +41,7 @@ export class DialogAddUserComponent {
 
       console.log('User erfolgreich gespeichert!');
       this.closeDialog();
+      this.loading = false;
     } catch (error) {
       console.error('Fehler beim Speichern des Users:', error);
     }
