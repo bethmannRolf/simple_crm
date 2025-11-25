@@ -8,14 +8,14 @@ import { ProgressBarComponent } from "../progress-bar/progress-bar.component";
   selector: 'app-dialog-add-user',
   imports: [FormsModule, ProgressBarComponent],
   templateUrl: './dialog-add-user.component.html',
-  styleUrls: ['./dialog-add-user.component.scss'] // Hinweis: styleUrls statt styleUrl
+  styleUrls: ['./dialog-add-user.component.scss']
 })
 export class DialogAddUserComponent {
 
   user: User = new User();
   @Output() close = new EventEmitter<void>();
 
-  // Firestore injizieren
+ 
   private firestore: Firestore = inject(Firestore);
 
   closeDialog() {
@@ -26,10 +26,10 @@ export class DialogAddUserComponent {
     console.log('Current User is', this.user);
 
     try {
-      // Collection 'users' erstellen oder verwenden
+    
       const usersCollection = collection(this.firestore, 'users');
 
-      // Neues Dokument hinzufügen
+  
       await addDoc(usersCollection, {
         firstName: this.user.firstName,
         lastName: this.user.lastName,
@@ -38,7 +38,7 @@ export class DialogAddUserComponent {
       });
 
       console.log('User erfolgreich gespeichert!');
-      this.closeDialog(); // Dialog nach Speichern schließen
+      this.closeDialog();
     } catch (error) {
       console.error('Fehler beim Speichern des Users:', error);
     }
