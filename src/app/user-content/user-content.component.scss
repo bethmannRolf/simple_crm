@@ -19,14 +19,14 @@
   img {
     width: 24px;
     height: 24px;
-    pointer-events: none; // verhindert, dass Klicks das Bild blockieren
+    pointer-events: none; 
   }
 
-  /* 🔹 Hover-Effekt etwas sanfter */
+
   &:hover {
     transform: translateY(-1px) scale(1.03);
     box-shadow: 0 8px 14px rgba(0, 0, 0, 0.18);
-    filter: brightness(1.05); // leicht heller, sanfter Effekt
+    filter: brightness(1.05); 
   }
 
   &:active {
@@ -39,7 +39,7 @@
     box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.4);
   }
 
-  /* Tooltip */
+
   &::after {
     content: 'Add User';
     position: absolute;
@@ -60,4 +60,11 @@
     opacity: 1;
     transform: translateX(50%) translateY(-3px);
   }
+}
+
+
+.user-list-section{
+  width: 50%;
+
+  background-color: lightgrey;
 }
