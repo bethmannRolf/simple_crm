@@ -1,7 +1,7 @@
 .single-user-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 4px;
@@ -12,17 +12,25 @@
 
 
 .user-table-style{
-
   width: 100%;
 
 }
 
 .table-header-style{
-      display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+
   background-color: rgb(240, 234, 234);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+th{
+    text-align: start;
+}
+
+td{
+      background-color: rgb(240, 234, 234);
   padding-top: 4px;
   padding-bottom: 4px;
 }
