@@ -1,18 +1,18 @@
 <div class="single-user-container">
-    <table class="user-table-style">
-        <tr class="table-header-style">
-            <th>Name</th>
-            <th>Prename</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>Beispielname</td>
-            <td>Beispielvorname</td>
-            <td>Beispiel-Email</td>
-        </tr>
-    </table>
-    <!-- <img class="single-user-icon" src="#">
-    <span class="single-user-preame-style">Prename</span>
-    <span class="single-user-surname-style">Surname</span>
-    <span class="single-user-mail-style">email address</span> -->
+  <table class="user-table-style">
+
+    <tr class="table-header-style">
+      <th>Name</th>
+      <th>Vorname</th>
+      <th>Email</th>
+    </tr>
+
+    @for (user of users$ | async; track user.id) {
+      <tr>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.mailAddress }}</td>
+      </tr>
+    }
+  </table>
 </div>
