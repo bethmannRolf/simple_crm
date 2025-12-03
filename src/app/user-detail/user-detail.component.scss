@@ -11,10 +11,8 @@
     border-radius: 100%;
     margin-bottom: 24px;
     margin-left: 24px;
-    // object-fit: cover;
     display: flex;
     align-items: flex-end;
-
 }
 
 .user-detail-header {
@@ -36,16 +34,16 @@
 }
 
 
-.adress-card{
+.adress-card {
     margin-top: 16px;
     padding: 16px;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    border-top:1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.user-adress-content{
+.user-adress-content {
     margin-top: 16px;
     display: flex;
     flex-direction: column;
