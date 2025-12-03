@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Firestore, doc, getDoc } from '@angular/fire/firestore/lite';
+import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -21,13 +21,11 @@ export class UserDetailComponent {
       const id = params.get('id');
 
       if (!id) {
-        console.warn('Noch keine ID vorhanden – Route lädt wahrscheinlich noch.');
+        console.warn('Noch keine ID vorhanden – Route lädt...');
         return;
       }
 
       this.userID = id;
-      console.log('UserID:', this.userID);
-
       this.getUser();
     });
   }
@@ -47,5 +45,4 @@ export class UserDetailComponent {
       console.error('Fehler beim Laden des Users:', error);
     }
   }
-
 }
