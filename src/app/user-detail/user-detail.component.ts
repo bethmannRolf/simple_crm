@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore/lite';
+import { Firestore, doc, getDoc } from '@angular/fire/firestore/lite';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,11 +10,42 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserDetailComponent {
 
+  user: any = {};
+  userID: string = '';
+
   private route = inject(ActivatedRoute);
-    private firestore = inject(Firestore);
+  private firestore = inject(Firestore);
 
   constructor() {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+
+      if (!id) {
+        console.warn('Noch keine ID vorhanden – Route lädt wahrscheinlich noch.');
+        return;
+      }
+
+      this.userID = id;
+      console.log('UserID:', this.userID);
+
+      this.getUser();
+    });
   }
+
+  async getUser() {
+    try {
+      const ref = doc(this.firestore, 'users', this.userID);
+      const snapshot = await getDoc(ref);
+
+      if (snapshot.exists()) {
+        this.user = snapshot.data();
+        console.log('User geladen:', this.user);
+      } else {
+        console.warn('User existiert nicht in Firestore');
+      }
+    } catch (error) {
+      console.error('Fehler beim Laden des Users:', error);
+    }
+  }
+
 }
