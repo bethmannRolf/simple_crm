@@ -33,6 +33,7 @@
 }
 
 .adress-card {
+  position: relative;
   margin-top: 16px;
   padding: 16px;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -45,4 +46,20 @@
   margin-top: 16px;
   display: flex;
   flex-direction: column;
+}
+
+.more-details-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: white;
+  margin: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 500%;
+}
+
+.more-details-button:hover {
+  background-color: #e2dfdf;
 }
