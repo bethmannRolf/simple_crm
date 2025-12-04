@@ -2,12 +2,13 @@ import { Component, inject } from '@angular/core';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { AddressDialogComponent } from '../address-dialog/address-dialog.component';
+import { UserEditDialogComponent } from '../user-edit-dialog/user-edit-dialog.component';
 
 
 
 @Component({
   selector: 'app-user-detail',
-  imports:[AddressDialogComponent],
+  imports:[AddressDialogComponent, UserEditDialogComponent],
   standalone: true,
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss'
@@ -15,6 +16,8 @@ import { AddressDialogComponent } from '../address-dialog/address-dialog.compone
 export class UserDetailComponent {
 
   showAddressDetailDialog = false;
+    showEditUserDialog = false;
+
   user: any = {};
   userID: string = '';
 
@@ -55,11 +58,20 @@ openAddressDetailDialog(){
 this.showAddressDetailDialog = true;
 }
 
+
+
 closeAddressDetailDialog(){
 this.showAddressDetailDialog = false;
 }
 
-  
+openUserEditDialog()  {
+
+}
+
+
+closeUserEditDialog(){
+
+}
 
 
 
