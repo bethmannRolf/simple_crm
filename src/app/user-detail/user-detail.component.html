@@ -1,5 +1,5 @@
 <div class="user-detail-header">
-
+     <button class="more-details-button" (click)="openUserEditDialog()"><img src="/assets/more_vert.png"></button>
 
 
     <img src="/assets/profile_1.png" class="profile-image-style">
@@ -12,7 +12,10 @@
 </div>
 
 <div class="adress-card">
-    <button class="more-details-button"><img src="/assets/more_vert.png"></button>
+    <button class="more-details-button" (click)="openAddressDetailDialog()"><img src="/assets/more_vert.png"></button>
+    @if (showAddressDetailDialog) {
+      <app-address-dialog (close)="closeAddressDetailDialog()"></app-address-dialog>
+    }
     <div class="adress-header">
         <h2 class="adress-heading">Address</h2>
     </div>

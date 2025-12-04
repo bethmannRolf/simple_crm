@@ -61,5 +61,6 @@
 }
 
 .more-details-button:hover {
+  cursor: pointer;
   background-color: #e2dfdf;
 }

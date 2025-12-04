@@ -1,0 +1,36 @@
+.dropdown-address-menu {
+  position: absolute;
+  right: 56px;
+  top: 32px;
+  width: 120px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: 20;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.address-change-menu-point {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-top: 1px solid black;
+}
+
+.address-change-menu-point:first-child {
+  border: none;
+}
+
+.address-change-menu-point:hover {
+  background-color: #dad1d1;
+  cursor: pointer;
+}
+
+.address-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}

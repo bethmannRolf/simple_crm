@@ -1,15 +1,20 @@
 import { Component, inject } from '@angular/core';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
+import { AddressDialogComponent } from '../address-dialog/address-dialog.component';
+
+
 
 @Component({
   selector: 'app-user-detail',
+  imports:[AddressDialogComponent],
   standalone: true,
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss'
 })
 export class UserDetailComponent {
 
+  showAddressDetailDialog = false;
   user: any = {};
   userID: string = '';
 
@@ -45,4 +50,20 @@ export class UserDetailComponent {
       console.error('Fehler beim Laden des Users:', error);
     }
   }
+
+openAddressDetailDialog(){
+this.showAddressDetailDialog = true;
 }
+
+closeAddressDetailDialog(){
+this.showAddressDetailDialog = false;
+}
+
+  
+
+
+
+
+}
+
+
