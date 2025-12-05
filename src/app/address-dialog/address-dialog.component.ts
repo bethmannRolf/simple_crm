@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-address-dialog',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './address-dialog.component.html',
   styleUrl: './address-dialog.component.scss'
@@ -10,11 +11,14 @@ import { FormsModule } from '@angular/forms';
 export class AddressDialogComponent {
 
 
-    @Output() close = new EventEmitter<void>();
-    
+  @Output() closeAddressDialog = new EventEmitter<void>();
+
 
   closeAddressDetailDialog() {
-    this.close.emit();
+
+    console.log('Try close dialog')
+    this.closeAddressDialog.emit();
+
   }
 
 

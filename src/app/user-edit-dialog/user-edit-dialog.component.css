@@ -1,4 +1,4 @@
-.dropdown-address-menu {
+.dropdown-user-data-menu {
   position: absolute;
   right: 56px;
   top: 32px;
@@ -13,22 +13,23 @@
   padding: 4px;
 }
 
-.address-change-menu-point {
+.user-data-change-menu-point {
   padding-top: 4px;
   padding-bottom: 4px;
   border-top: 1px solid black;
+  color: black;
 }
 
-.address-change-menu-point:first-child {
+.user-data-change-menu-point:first-child {
   border: none;
 }
 
-.address-change-menu-point:hover {
+.user-data-change-menu-point:hover {
   background-color: #dad1d1;
   cursor: pointer;
 }
 
-.address-dialog-backdrop {
+.user-edit-dialog-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);

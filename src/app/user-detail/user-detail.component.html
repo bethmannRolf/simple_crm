@@ -2,7 +2,7 @@
      <button class="more-details-button" (click)="openUserEditDialog()"><img src="/assets/more_vert.png"></button>
 @if (showEditUserDialog) {
 
-<app-user-edit-dialog></app-user-edit-dialog>
+<app-user-edit-dialog (closeUserEditDialog)="closeUserEditDialog()"></app-user-edit-dialog >
 
 
 
@@ -20,7 +20,7 @@
 <div class="adress-card">
     <button class="more-details-button" (click)="openAddressDetailDialog()"><img src="/assets/more_vert.png"></button>
     @if (showAddressDetailDialog) {
-      <app-address-dialog (closeAddress)="closeAddressDetailDialog()"></app-address-dialog>
+      <app-address-dialog (closeAddressDialog)=" closeAddressDetailDialog()"></app-address-dialog>
     }
     <div class="adress-header">
         <h2 class="adress-heading">Address</h2>

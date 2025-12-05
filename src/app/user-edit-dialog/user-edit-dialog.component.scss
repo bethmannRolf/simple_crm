@@ -1,0 +1,50 @@
+
+
+.dropdown-user-data-menu {
+    position: absolute;
+    right: 56px;
+    top: 32px;
+    width: 120px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 20;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.user-data-change-menu-point {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 1px solid black;
+    color: black;
+
+    &:first-child {
+        border: none;
+    }
+
+
+&:hover{
+    background-color: rgb(218, 209, 209);
+    cursor: pointer;
+}
+
+}
+
+
+
+
+
+
+
+
+
+.user-edit-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+

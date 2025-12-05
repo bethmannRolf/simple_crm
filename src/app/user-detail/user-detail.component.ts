@@ -16,7 +16,7 @@ import { UserEditDialogComponent } from '../user-edit-dialog/user-edit-dialog.co
 export class UserDetailComponent {
 
   showAddressDetailDialog = false;
-    showEditUserDialog = false;
+  showEditUserDialog = false;
 
   user: any = {};
   userID: string = '';
@@ -65,12 +65,12 @@ this.showAddressDetailDialog = false;
 }
 
 openUserEditDialog()  {
-
+this.showEditUserDialog = true;
 }
 
 
 closeUserEditDialog(){
-
+this.showEditUserDialog = false;
 }
 
 

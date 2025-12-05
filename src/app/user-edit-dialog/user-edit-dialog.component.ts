@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-edit-dialog',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './user-edit-dialog.component.html',
   styleUrl: './user-edit-dialog.component.scss'
@@ -12,11 +13,12 @@ export class UserEditDialogComponent {
 
 
 
-      @Output() close = new EventEmitter<void>();
+  @Output() closeUserEditDialog = new EventEmitter<void>();
 
 
-  closeUserEditDialog() {
-    this.close.emit();
+  closeUserDetailEditDialog() {
+    console.log('Try close user dialog')
+    this.closeUserEditDialog.emit();
   }
 
 
