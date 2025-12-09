@@ -16,6 +16,14 @@
   animation: fadeIn 0.2s ease-out;
 }
 
+.display-column {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -38,6 +46,13 @@
 
 .save-btn:hover {
   background-color: #1b70b9;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 h2 {

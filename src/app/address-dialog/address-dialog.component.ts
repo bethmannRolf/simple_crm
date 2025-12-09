@@ -13,6 +13,10 @@ export class AddressDialogComponent {
 
   showDialogEditDetails = false;
 
+  
+
+
+
 
   @Output() closeAddressDialog = new EventEmitter<void>();
 
@@ -26,7 +30,9 @@ export class AddressDialogComponent {
 
   editAddressDetails(){
   this.showDialogEditDetails = true;
+
 }
+
 
 
 
