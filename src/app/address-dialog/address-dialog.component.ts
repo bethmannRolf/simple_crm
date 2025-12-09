@@ -1,39 +1,31 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
+import { User } from '../models/user.class';
 
 @Component({
   selector: 'app-address-dialog',
   standalone: true,
-  imports: [FormsModule, DialogEditAddressComponent],
+  imports: [CommonModule, DialogEditAddressComponent],
   templateUrl: './address-dialog.component.html',
-  styleUrl: './address-dialog.component.scss'
+  styleUrls: ['./address-dialog.component.scss']
 })
 export class AddressDialogComponent {
 
+  @Input() user!: User;
+  @Output() closeAddressDialogEmitter = new EventEmitter<void>();
+  @Output() saveAddressEmitter = new EventEmitter<User>();
+
   showDialogEditDetails = false;
 
-  
+  editAddressDetails() { this.showDialogEditDetails = true; }
+  closeDialogEdit() { this.showDialogEditDetails = false; }
+
+  closeAddressDialog() { this.closeAddressDialogEmitter.emit(); }
 
 
-
-
-  @Output() closeAddressDialog = new EventEmitter<void>();
-
-
-  closeAddressDetailDialog() {
-
-    console.log('Try close dialog')
-    this.closeAddressDialog.emit();
-
+  saveAddress(updatedUser: User) {
+    this.saveAddressEmitter.emit(updatedUser);
+    this.showDialogEditDetails = false;
   }
-
-  editAddressDetails(){
-  this.showDialogEditDetails = true;
-
-}
-
-
-
-
 }

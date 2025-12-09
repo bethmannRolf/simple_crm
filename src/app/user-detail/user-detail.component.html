@@ -1,33 +1,35 @@
 <div class="user-detail-header">
-     <button class="more-details-button" (click)="openUserEditDialog()"><img src="/assets/more_vert.png"></button>
-@if (showEditUserDialog) {
-
-<app-user-edit-dialog (closeUserEditDialog)="closeUserEditDialog()"></app-user-edit-dialog >
-
-
-
-}
-
     <img src="/assets/profile_1.png" class="profile-image-style">
     <div class="user-details">
         <h2>{{user.firstName}} {{user.lastName}}</h2>
         <span>{{user.mailAddress}}</span>
-
     </div>
 
+    <button class="more-details-button" (click)="openUserEditDialog()">
+        <img src="/assets/more_vert.png">
+    </button>
+
+    @if (showEditUserDialog) {
+    <app-user-edit-dialog [user]="user" (closeUserEditDialogEmitter)="closeUserEditDialog()"
+        (saveUserEditEmitter)="saveUserEdit($event)">
+    </app-user-edit-dialog>
+    }
 </div>
 
-<div class="adress-card">
-    <button class="more-details-button" (click)="openAddressDetailDialog()"><img src="/assets/more_vert.png"></button>
-    @if (showAddressDetailDialog) {
-      <app-address-dialog (closeAddressDialog)=" closeAddressDetailDialog()"></app-address-dialog>
-    }
-    <div class="adress-header">
-        <h2 class="adress-heading">Address</h2>
-    </div>
-    <div class="user-adress-content">
-        <span>Musterstraße</span>
-        <span>344323 Musterstadt</span>
+<div class="address-card">
+    <h2 class="address-heading">Address</h2>
+    <div class="user-address-content">
+        <span>{{user.zipCode}}</span>
+        <span>{{user.city}}</span>
     </div>
 
+    <button class="more-details-button" (click)="openAddressDetailDialog()">
+        <img src="/assets/more_vert.png">
+    </button>
+
+    @if (showAddressDetailDialog) {
+    <app-address-dialog [user]="user" (closeAddressDialogEmitter)="closeAddressDetailDialog()"
+        (saveAddressEmitter)="saveAddress($event)">
+    </app-address-dialog>
+    }
 </div>

@@ -1,27 +1,31 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
+import { User } from '../models/user.class';
 
 @Component({
   selector: 'app-user-edit-dialog',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, DialogEditUserComponent],
   templateUrl: './user-edit-dialog.component.html',
-  styleUrl: './user-edit-dialog.component.scss'
+  styleUrls: ['./user-edit-dialog.component.scss']
 })
 export class UserEditDialogComponent {
 
+  @Input() user!: User;
+  @Output() closeUserEditDialogEmitter = new EventEmitter<void>();
+  @Output() saveUserEditEmitter = new EventEmitter<User>();
 
+  showDialogEditUser = false;
 
-  @Output() closeUserEditDialog = new EventEmitter<void>();
+  openEditUserDialog() { this.showDialogEditUser = true; }
+  closeEditUserDialog() { this.showDialogEditUser = false; }
 
-
-  closeUserDetailEditDialog() {
-    console.log('Try close user dialog')
-    this.closeUserEditDialog.emit();
+  saveEditUser(updatedUser: User) {
+    this.saveUserEditEmitter.emit(updatedUser);
+    this.closeEditUserDialog();
   }
 
-
-
-
+  closeDropdown() { this.closeUserEditDialogEmitter.emit(); }
 }
+

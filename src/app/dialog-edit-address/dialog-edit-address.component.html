@@ -10,7 +10,7 @@
             <span class="required-asteric">*</span>
         </div>
 
-        <input   placeholder="z.B. 18059">
+        <input [(ngModel)]="user.zipCode" placeholder="z.B. 18059">
     </div>
     <div class="display-column">
         <div>
@@ -18,14 +18,14 @@
             <span class="required-asteric">*</span>
         </div>
 
-        <input   placeholder="z.B. Rostock">
+        <input  [(ngModel)]="user.city" placeholder="z.B. Rostock">
     </div>
 
 
 
     <div class="dialog-actions">
-        <button>Abbrechen</button>
-        <button class="save-btn">Speichern</button>
+        <button (click)="closeDialog()">Abbrechen</button>
+        <button class="save-btn" (click)="saveChanges()">Speichern</button>
     </div>
 
 
