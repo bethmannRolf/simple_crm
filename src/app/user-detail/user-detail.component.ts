@@ -49,8 +49,23 @@ export class UserDetailComponent {
   }
 
 
-  openUserEditDialog() { this.showEditUserDialog = true; }
-  closeUserEditDialog() { this.showEditUserDialog = false; }
+  openUserEditDialog() {
+    this.showEditUserDialog = true;
+
+  }
+  closeUserEditDialog() {
+    this.showEditUserDialog = false;
+
+  }
+
+  openAddressDetailDialog() {
+    this.showAddressDetailDialog = true;
+
+  }
+  closeAddressDetailDialog() {
+    this.showAddressDetailDialog = false;
+
+  }
 
   async saveUserEdit(updatedUser: User) {
     this.user = { ...updatedUser };
@@ -68,8 +83,7 @@ export class UserDetailComponent {
     this.showEditUserDialog = false;
   }
 
-  openAddressDetailDialog() { this.showAddressDetailDialog = true; }
-  closeAddressDetailDialog() { this.showAddressDetailDialog = false; }
+
 
   async saveAddress(updatedUser: User) {
     this.user = { ...updatedUser };

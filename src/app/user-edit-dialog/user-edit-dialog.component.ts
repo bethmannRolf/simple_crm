@@ -18,14 +18,20 @@ export class UserEditDialogComponent {
 
   showDialogEditUser = false;
 
-  openEditUserDialog() { this.showDialogEditUser = true; }
-  closeEditUserDialog() { this.showDialogEditUser = false; }
+  openEditUserDialog() {
+    this.showDialogEditUser = true;
+
+  }
+  closeEditUserDialog() {
+    this.showDialogEditUser = false;
+    this.closeUserDropdown()
+  }
 
   saveEditUser(updatedUser: User) {
     this.saveUserEditEmitter.emit(updatedUser);
     this.closeEditUserDialog();
   }
 
-  closeDropdown() { this.closeUserEditDialogEmitter.emit(); }
+  closeUserDropdown() { this.closeUserEditDialogEmitter.emit(); }
 }
 

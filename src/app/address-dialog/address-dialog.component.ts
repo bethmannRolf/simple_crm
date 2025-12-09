@@ -18,10 +18,18 @@ export class AddressDialogComponent {
 
   showDialogEditDetails = false;
 
-  editAddressDetails() { this.showDialogEditDetails = true; }
-  closeDialogEdit() { this.showDialogEditDetails = false; }
+  editAddressDetails() { this.showDialogEditDetails = true;
+    
+   }
+  closeDialogEdit() { 
 
-  closeAddressDialog() { this.closeAddressDialogEmitter.emit(); }
+    this.showDialogEditDetails = false;
+    this.closeAddressDialog()
+   }
+
+  closeAddressDialog() { this.closeAddressDialogEmitter.emit(); 
+
+  }
 
 
   saveAddress(updatedUser: User) {

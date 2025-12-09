@@ -15,7 +15,9 @@ export class DialogEditAddressComponent {
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<User>();
 
-  closeDialog() { this.close.emit(); }
+  closeDialogEdit() { this.close.emit(); 
+   
+  }
 
   saveChanges() {
     this.save.emit({ ...this.user }); 

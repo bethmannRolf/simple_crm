@@ -1,5 +1,6 @@
-<div class="dropdown-user-menu">
-    <span (click)="openEditUserDialog()">Edit User</span>
+<div class="dropdown-user-data-menu">
+    <span class="user-data-change-menu-point" (click)="openEditUserDialog()">Edit User</span>
+    <span class="user-data-change-menu-point">Second Point</span>
 </div>
 
 @if (showDialogEditUser) {
@@ -10,4 +11,4 @@
     </app-dialog-edit-user>
 }
 
-<div class="dropdown-backdrop" (click)="closeDropdown()"></div>
+<div class="user-edit-dialog-backdrop" (click)="closeUserDropdown()"></div>
