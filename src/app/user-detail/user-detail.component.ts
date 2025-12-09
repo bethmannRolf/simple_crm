@@ -18,6 +18,7 @@ export class UserDetailComponent {
   showAddressDetailDialog = false;
   showEditUserDialog = false;
 
+
   user: any = {};
   userID: string = '';
 
@@ -72,6 +73,13 @@ this.showEditUserDialog = true;
 closeUserEditDialog(){
 this.showEditUserDialog = false;
 }
+
+
+
+
+
+
+
 
 
 

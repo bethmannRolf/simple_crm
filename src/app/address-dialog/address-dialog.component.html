@@ -1,5 +1,11 @@
 <div class="dropdown-address-menu">
-    <span class="address-change-menu-point" >Edit Address</span>
+    <span class="address-change-menu-point" (click)="editAddressDetails()">Edit Address</span>
     <span class="address-change-menu-point">Other Point</span>
 </div>
+
+@if (showDialogEditDetails) {
+
+<app-dialog-edit-address></app-dialog-edit-address>    
+}
+
 <div class="address-dialog-backdrop" (click)="closeAddressDetailDialog()" ></div>

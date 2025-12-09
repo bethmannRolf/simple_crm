@@ -5,15 +5,19 @@
       <th>Name</th>
       <th>Vorname</th>
       <th>Email</th>
+       <th>Postleitzahl</th>
+        <th>Ort</th>
+
     </tr>
 
     @for (user of users$ | async; track user.id) {
-      <tr (click)="openUser(user.id)">
-        <td>{{ user.lastName }}</td>
-        <td>{{ user.firstName }}</td>
-        <td>{{ user.mailAddress }}</td>
-              <td>{{ user.id }}</td>
-      </tr>
+    <tr (click)="openUser(user.id)">
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.mailAddress }}</td>
+      <td>{{user.zipCode}}</td>
+      <td>{{user.city}}</td>
+    </tr>
     }
   </table>
 </div>

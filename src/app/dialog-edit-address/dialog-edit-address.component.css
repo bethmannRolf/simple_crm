@@ -2,13 +2,12 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center ;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
   padding-bottom: 24px;
-
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 1001;
@@ -16,11 +15,6 @@
   max-width: 400px;
   animation: fadeIn 0.2s ease-out;
 }
-
-
-
-
-
 
 @keyframes fadeIn {
   from {
@@ -40,12 +34,12 @@
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
-
-  &:hover{
-      background-color: #1b70b9;
-  }
 }
 
-h2{
-  padding-top:  24px,
+.save-btn:hover {
+  background-color: #1b70b9;
+}
+
+h2 {
+  padding-top: 24px;
 }

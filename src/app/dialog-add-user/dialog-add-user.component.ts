@@ -36,6 +36,8 @@ export class DialogAddUserComponent {
         firstName: this.user.firstName,
         lastName: this.user.lastName,
         mailAddress: this.user.mailAddress,
+        zipCode: this.user.zipCode,
+        city: this.user.city,
         createdAt: new Date()
       });
 
