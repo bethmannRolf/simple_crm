@@ -19,14 +19,13 @@
   img {
     width: 24px;
     height: 24px;
-    pointer-events: none; 
+    pointer-events: none;
   }
-
 
   &:hover {
     transform: translateY(-1px) scale(1.03);
     box-shadow: 0 8px 14px rgba(0, 0, 0, 0.18);
-    filter: brightness(1.05); 
+    filter: brightness(1.05);
   }
 
   &:active {
@@ -38,7 +37,6 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.4);
   }
-
 
   &::after {
     content: 'Add User';
@@ -63,10 +61,6 @@
 }
 
 
-.user-list-section{
+.user-list-section {
   width: 90%;
-
-
-  // background-color: lightgrey;
 }
-

@@ -2,13 +2,8 @@
     <span class="user-data-change-menu-point" (click)="openEditUserDialog()">Edit User</span>
     <span class="user-data-change-menu-point">Second Point</span>
 </div>
-
 @if (showDialogEditUser) {
-    <app-dialog-edit-user
-        [user]="user"
-        (close)="closeEditUserDialog()"
-        (save)="saveEditUser($event)">
-    </app-dialog-edit-user>
+<app-dialog-edit-user [user]="user" (close)="closeEditUserDialog()" (save)="saveEditUser($event)">
+</app-dialog-edit-user>
 }
-
 <div class="user-edit-dialog-backdrop" (click)="closeUserDropdown()"></div>

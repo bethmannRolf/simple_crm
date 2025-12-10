@@ -1,13 +1,11 @@
 <div class="single-user-container">
   <table class="user-table-style">
-
     <tr class="table-header-style">
       <th>Name</th>
       <th>Vorname</th>
       <th>Email</th>
       <th>Postleitzahl</th>
       <th>Ort</th>
-
     </tr>
 
     @for (user of users$ | async; track user.id) {

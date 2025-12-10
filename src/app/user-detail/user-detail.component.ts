@@ -32,7 +32,6 @@ export class UserDetailComponent {
     });
   }
 
-
   async getUser() {
     try {
       const ref = doc(this.firestore, 'users', this.userID);
@@ -48,23 +47,18 @@ export class UserDetailComponent {
     }
   }
 
-
   openUserEditDialog() {
     this.showEditUserDialog = true;
-
   }
   closeUserEditDialog() {
     this.showEditUserDialog = false;
-
   }
 
   openAddressDetailDialog() {
     this.showAddressDetailDialog = true;
-
   }
   closeAddressDetailDialog() {
     this.showAddressDetailDialog = false;
-
   }
 
   async saveUserEdit(updatedUser: User) {
@@ -82,8 +76,6 @@ export class UserDetailComponent {
     }
     this.showEditUserDialog = false;
   }
-
-
 
   async saveAddress(updatedUser: User) {
     this.user = { ...updatedUser };

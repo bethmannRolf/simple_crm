@@ -15,23 +15,19 @@ import { Router } from '@angular/router';
 export class SingleUserCardComponent {
 
   private firestore = inject(Firestore);
-
   users$!: Observable<any[]>;
 
-  constructor( private router :Router) {
+  constructor(private router: Router) {
     this.loadUsersRealtime();
   }
 
   loadUsersRealtime() {
     const usersCollection = collection(this.firestore, 'users');
     this.users$ = collectionData(usersCollection, { idField: 'id' });
-    
+
   }
 
-openUser(userId: string) {
-  this.router.navigate(['/users', userId]);
-}
-
-
-
+  openUser(userId: string) {
+    this.router.navigate(['/users', userId]);
+  }
 }

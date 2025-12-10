@@ -17,7 +17,6 @@ export class DialogAddUserComponent {
   user: User = new User();
   @Output() close = new EventEmitter<void>();
 
-
   private firestore: Firestore = inject(Firestore);
 
   closeDialog() {
@@ -28,9 +27,7 @@ export class DialogAddUserComponent {
     console.log('Current User is', this.user);
     this.loading = true
     try {
-
       const usersCollection = collection(this.firestore, 'users');
-
 
       await addDoc(usersCollection, {
         firstName: this.user.firstName,
@@ -49,4 +46,3 @@ export class DialogAddUserComponent {
     }
   }
 }
-

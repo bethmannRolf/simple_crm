@@ -1,26 +1,21 @@
 .dashboard-nav-container {
-        display:flex;
-   align-items: center;
-   padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
 
-   &:hover{
-    background-color: lightgray;
-    scale:(1.1)
-    
-   }
-
+    &:hover {
+        background-color: lightgray;
+        scale: (1.1)
+    }
 }
 
 .dashboard-span-style {
-
     color: black;
     font-weight: bold;
     font-size: 20px;
 }
 
-
-.dashboard-image-style{
-
+.dashboard-image-style {
     width: 32px;
     height: 32px;
 }

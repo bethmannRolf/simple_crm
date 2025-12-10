@@ -1,15 +1,10 @@
 <div class="dialog-address-details-container">
-
     <h2>Adresse ändern</h2>
-
-
-
     <div class="display-column">
         <div>
             <span class="user-dialog-font-style">Postleitzahl</span>
             <span class="required-asteric">*</span>
         </div>
-
         <input [(ngModel)]="user.zipCode" placeholder="z.B. 18059">
     </div>
     <div class="display-column">
@@ -17,16 +12,10 @@
             <span class="user-dialog-font-style">Ort</span>
             <span class="required-asteric">*</span>
         </div>
-
-        <input  [(ngModel)]="user.city" placeholder="z.B. Rostock">
+        <input [(ngModel)]="user.city" placeholder="z.B. Rostock">
     </div>
-
-
-
     <div class="dialog-actions">
         <button (click)="closeDialogEdit()">Abbrechen</button>
         <button class="save-btn" (click)="saveChanges()">Speichern</button>
     </div>
-
-
 </div>

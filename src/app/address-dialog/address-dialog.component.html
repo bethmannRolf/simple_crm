@@ -1,14 +1,9 @@
 <div class="dropdown-address-menu">
-    <span class="address-change-menu-point" (click)="editAddressDetails()">Edit Address</span>
-    <span class="address-change-menu-point">Other Point</span>
+  <span class="address-change-menu-point" (click)="editAddressDetails()">Edit Address</span>
+  <span class="address-change-menu-point">Other Point</span>
 </div>
-
 @if (showDialogEditDetails) {
-  <app-dialog-edit-address
-      [user]="user"
-      (close)="closeDialogEdit()"
-      (save)="saveAddress($event)">
-  </app-dialog-edit-address>
+<app-dialog-edit-address [user]="user" (close)="closeDialogEdit()" (save)="saveAddress($event)">
+</app-dialog-edit-address>
 }
-
 <div class="address-dialog-backdrop" (click)="closeAddressDialog()"></div>

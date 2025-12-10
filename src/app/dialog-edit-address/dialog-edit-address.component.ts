@@ -15,12 +15,12 @@ export class DialogEditAddressComponent {
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<User>();
 
-  closeDialogEdit() { this.close.emit(); 
-   
+  closeDialogEdit() {
+    this.close.emit();
   }
 
   saveChanges() {
-    this.save.emit({ ...this.user }); 
+    this.save.emit({ ...this.user });
     this.close.emit();
   }
 }

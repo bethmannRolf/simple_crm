@@ -34,4 +34,3 @@ export class UserEditDialogComponent {
 
   closeUserDropdown() { this.closeUserEditDialogEmitter.emit(); }
 }
-

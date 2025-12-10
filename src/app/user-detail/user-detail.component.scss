@@ -1,5 +1,5 @@
 .user-detail-header {
-position: relative;
+    position: relative;
     min-height: 250px;
     background-color: green;
     color: white;
@@ -33,7 +33,6 @@ position: relative;
     }
 }
 
-
 .address-card {
     position: relative;
     margin-top: 16px;
@@ -50,7 +49,7 @@ position: relative;
     flex-direction: column;
 }
 
-.more-details-button{
+.more-details-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -61,7 +60,7 @@ position: relative;
     height: 48px;
     border-radius: 500%;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         background-color: rgb(226, 223, 223);
     }

@@ -1,10 +1,12 @@
-*{color: black;}
+* {
+  color: black;
+}
 
 .dialog-edit-user-container {
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center ;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -19,15 +21,13 @@
   animation: fadeIn 0.2s ease-out;
 }
 
-
-.display-column{
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    padding-bottom: 12px;
-    padding-top: 12px;
+.display-column {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
-
 
 .dialog-actions {
   display: flex;
@@ -44,8 +44,8 @@
   border-radius: 6px;
   cursor: pointer;
 
-  &:hover{
-      background-color: #1b70b9;
+  &:hover {
+    background-color: #1b70b9;
   }
 }
 
@@ -54,47 +54,45 @@
     opacity: 0;
     transform: translate(-50%, -48%);
   }
+
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
 }
 
-
-.display-column{
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    padding-bottom: 12px;
-    padding-top: 12px;
+.display-column {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
-.data-content{
-    padding-bottom: 12px;
-    padding-top: 12px;
-
-}
-input::placeholder{
-    padding: 4px;
-  
+.data-content {
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
-.user-dialog-font-style{
-    font-size: 20px;
+input::placeholder {
+  padding: 4px;
+
 }
 
-.required-asteric{
-    padding-left: 2px;
-    color: red;
+.user-dialog-font-style {
+  font-size: 20px;
 }
 
-.user-dialog-container{
+.required-asteric {
+  padding-left: 2px;
+  color: red;
+}
+
+.user-dialog-container {
   position: relative;
 
 }
 
-
-
-h2{
-  padding-top:  24px,
+h2 {
+  padding-top: 24px,
 }

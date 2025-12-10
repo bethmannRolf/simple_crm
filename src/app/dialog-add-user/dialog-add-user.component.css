@@ -15,7 +15,6 @@
   transform: translate(-50%, -50%);
   background: white;
   padding-bottom: 24px;
-
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 1001;
@@ -38,10 +37,10 @@
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
+}
 
-  &:hover {
-    background-color: #1b70b9;
-  }
+.save-btn:hover {
+  background-color: #1b70b9;
 }
 
 @keyframes fadeIn {
@@ -49,7 +48,6 @@
     opacity: 0;
     transform: translate(-50%, -48%);
   }
-
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
@@ -91,5 +89,5 @@ app-progress-bar {
 }
 
 h2 {
-  padding-top: 24px,
+  padding-top: 24px;
 }

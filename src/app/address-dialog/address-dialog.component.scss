@@ -22,19 +22,15 @@
         border: none;
     }
 
-
-&:hover{
-    background-color: rgb(218, 209, 209);
-    cursor: pointer;
+    &:hover {
+        background-color: rgb(218, 209, 209);
+        cursor: pointer;
+    }
 }
-
-}
-
 
 .address-dialog-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 10;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
 }
-

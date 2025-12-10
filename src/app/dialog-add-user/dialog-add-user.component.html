@@ -1,34 +1,24 @@
 <div class="dialog-backdrop" (click)="closeDialog()"></div>
-
-
 <div class="user-dialog-container">
-
     <div class="dialog-content">
         @if (loading) {
         <app-progress-bar></app-progress-bar>
         }
-
         <div class="user-dialog-container">
-
-
             <h2>Neuen Benutzer hinzufügen</h2>
-
             <div class="data-content">
                 <div class="user-prename-div display-column">
                     <div>
                         <span class="username-heading user-dialog-font-style">First Name</span>
                         <span class="required-asteric">*</span>
                     </div>
-
                     <input [disabled]="loading" [(ngModel)]="user.firstName" placeholder="z.B. Anton">
                 </div>
-
                 <div class="lastname-user-div display-column">
                     <div>
                         <span class="username-headinguser-dialog-font-style">Last Name</span>
                         <span class="required-asteric">*</span>
                     </div>
-
                     <input [disabled]="loading" [(ngModel)]="user.lastName" placeholder="z.B. Müller">
                 </div>
                 <div class="display-column">
@@ -36,17 +26,14 @@
                         <span class="user-dialog-font-style">Mailadresse</span>
                         <span class="required-asteric">*</span>
                     </div>
-
                     <input [disabled]="loading" [(ngModel)]="user.mailAddress"
                         placeholder="z.B. anton.mueller@gmail.com">
                 </div>
-
                 <div class="display-column">
                     <div>
                         <span class="user-dialog-font-style">Postleitzahl</span>
                         <span class="required-asteric">*</span>
                     </div>
-
                     <input [disabled]="loading" [(ngModel)]="user.zipCode" placeholder="z.B. 18059">
                 </div>
                 <div class="display-column">
@@ -54,19 +41,9 @@
                         <span class="user-dialog-font-style">Ort</span>
                         <span class="required-asteric">*</span>
                     </div>
-
                     <input [disabled]="loading" [(ngModel)]="user.city" placeholder="z.B. Rostock">
                 </div>
-
-
-
-
-
             </div>
-
-
-
-
             <div class="dialog-actions">
                 <button [disabled]="loading" (click)="closeDialog()">Abbrechen</button>
                 <button [disabled]="loading" class="save-btn" (click)="saveUser()">Speichern</button>

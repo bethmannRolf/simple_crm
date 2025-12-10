@@ -4,7 +4,6 @@
   left: 0;
   height: 250px;
   width: 100%;
-
   display: flex;
   align-items: center;
   padding: 0 1´4px;
@@ -13,41 +12,34 @@
   user-select: none;
   display: flex;
   flex-direction: column;
- 
 }
 
-.toolbar-heading{
-    font-size: 32px;
-    padding-left: 200px;
+.toolbar-heading {
+  font-size: 32px;
+  padding-left: 200px;
 }
-
-
 
 .whole-toolbar.shrink {
   left: 250px;
   width: calc(100% - 250px);
 }
 
-
-
-.burger-menu{
+.burger-menu {
   cursor: pointer;
-    width: 32px;
-    height: 32px;
-     padding-left: 24px;
-    &:hover{
-      scale: (1.1);
-    }
+  width: 32px;
+  height: 32px;
+  padding-left: 24px;
+
+  &:hover {
+    scale: (1.1);
+  }
 }
 
-.heading-line-toolbar{
+.heading-line-toolbar {
   display: flex;
- align-items: center;
-
- 
-    background: #222;
+  align-items: center;
+  background: #222;
   color: white;
-    height: 60px;
+  height: 60px;
   width: 100%;
 }
-

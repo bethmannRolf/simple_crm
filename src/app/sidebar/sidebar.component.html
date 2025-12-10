@@ -1,10 +1,7 @@
 <div class="sidebar" [class.open]="sidebarOpen()">
-
   <div class="logo-area">
     <img class="logo-sidebar" src="/assets/logo.png" alt="Logo">
   </div>
-
-
   @if (sidebarOpen()) {
   <div class="sidebar-content-div">
 
@@ -12,8 +9,6 @@
       class="sidebar-link">
       <img src="/assets/dashboard.svg"><span>Dashboard</span>
     </a>
-
-
     <a routerLink="/user" routerLinkActive="active" class="sidebar-link">
       <img class="sidebar-image" src="/assets/user.svg"><span> User</span>
     </a>
