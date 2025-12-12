@@ -15,6 +15,16 @@ export class DialogEditAddressComponent {
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<User>();
 
+  editedUser!: User;
+
+  ngOnInit() {
+    this.editedUser = structuredClone(this.user);
+  }
+
+
+  
+
+
   closeDialogEdit() {
     this.close.emit();
   }

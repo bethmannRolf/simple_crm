@@ -15,10 +15,18 @@ export class DialogEditUserComponent {
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<User>();
 
-  closeDialog() { this.close.emit(); }
+  editedUser!: User;
+
+  ngOnInit() {
+    this.editedUser = structuredClone(this.user);
+  }
+
+  closeDialog() {
+    this.close.emit();
+  }
 
   saveChanges() {
-    this.save.emit({ ...this.user }); 
+    this.save.emit(this.editedUser);
     this.close.emit();
   }
 }

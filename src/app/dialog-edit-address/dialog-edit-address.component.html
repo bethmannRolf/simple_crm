@@ -5,14 +5,14 @@
             <span class="user-dialog-font-style">Postleitzahl</span>
             <span class="required-asteric">*</span>
         </div>
-        <input [(ngModel)]="user.zipCode" placeholder="z.B. 18059">
+        <input [(ngModel)]="editedUser.zipCode" placeholder="z.B. 18059">
     </div>
     <div class="display-column">
         <div>
             <span class="user-dialog-font-style">Ort</span>
             <span class="required-asteric">*</span>
         </div>
-        <input [(ngModel)]="user.city" placeholder="z.B. Rostock">
+        <input [(ngModel)]="editedUser.city" placeholder="z.B. Rostock">
     </div>
     <div class="dialog-actions">
         <button (click)="closeDialogEdit()">Abbrechen</button>
